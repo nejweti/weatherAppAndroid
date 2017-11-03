@@ -6,11 +6,11 @@ package com.nejat.customlistview;
 
 public class DataModel {
     String city;
-    String Temp;
+    String temp;
 
     public DataModel(String city, String temp) {
         this.city = city;
-        Temp = temp;
+        this.temp = temp;
     }
 
     public String getCity() {
@@ -18,6 +18,6 @@ public class DataModel {
     }
 
     public String getTemp() {
-        return Temp;
+        return temp;
     }
 }

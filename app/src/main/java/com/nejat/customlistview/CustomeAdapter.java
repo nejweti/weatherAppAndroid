@@ -13,13 +13,14 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Created by user on 11/1/2017.
  */
 
 public class CustomeAdapter extends ArrayAdapter<DataModel> {
-    ArrayAdapter<DataModel> dataSet;
+    ArrayList<DataModel> dataSet;
     Context mcontext;
 
     public CustomeAdapter(Context context, ArrayList<DataModel> data) {
@@ -37,7 +38,8 @@ public class CustomeAdapter extends ArrayAdapter<DataModel> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         ViewHolder viewHolder = new ViewHolder();
-        DataModel dataModel =new DataModel();
+        Object object = getItem(position);
+        DataModel dataModel =(DataModel) object;
 
         LayoutInflater inflater = LayoutInflater.from(getContext());
 
